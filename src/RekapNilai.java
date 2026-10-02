@@ -14,6 +14,23 @@ public class RekapNilai {
         System.out.println("===== REKAP NILAI KELAS =====");
         System.out.println("Ketik -1 kalau sudah selesai.");
 
+        do {
+            System.out.print("Nilai ke-" + (jumlahSah + 1) + " : ");
 
+            if (!input.hasNextInt()) {
+                System.out.println("  ditolak - masukkan angka bulat");
+                input.next();
+                continue;
+            }
+            nilai = input.nextInt();
+
+            if (nilai == SELESAI) {
+                break;
+            }
+
+            if (nilai < 0 || nilai > 100) {
+                System.out.println("  ditolak - nilai harus 0..100");
+                continue;
+            }
     }
 }
