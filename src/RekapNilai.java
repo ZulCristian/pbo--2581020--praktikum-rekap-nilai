@@ -60,5 +60,21 @@ public class RekapNilai {
             jumlahSah++;
 
         } while (nilai != SELESAI);
+
+        System.out.println();
+        if (jumlahSah == 0) {
+            System.out.println("Tidak ada nilai sah yang dimasukkan.");
+            return;
+        }
+
+        double rata = total / jumlahSah;
+
+        String status = rata >= 60 ? "LULUS" : "TIDAK LULUS";
+
+        String rataTeks = String.format("%.2f", rata);
+
+        System.out.println("Nilai sah   : " + jumlahSah);
+        System.out.println("Rata-rata   : " + rataTeks);
+        System.out.println("Status      : " + status);
     }
 }
